@@ -41,8 +41,7 @@ namespace MVCTask_08_09_2018.Controllers
         {
             var viewModel = new EmployeeFormViewModel
             {
-                Title = "Add New Employee",
-                SubmitName = "Add",
+                Employee = new Employee {Id = 0},
                 Departments = _context.Departments.ToList(),
                 Sexes = _context.Sexes.ToList(),
                 ProgrammingLanguages = _context.ProgrammingLanguages.ToList()
@@ -104,8 +103,6 @@ namespace MVCTask_08_09_2018.Controllers
 
             var viewModel = new EmployeeFormViewModel
             {
-                Title = "Change Employee Data",
-                SubmitName = "Save",
                 Employee = employee,
                 Departments = _context.Departments.ToList(),
                 Sexes = _context.Sexes.ToList(),
