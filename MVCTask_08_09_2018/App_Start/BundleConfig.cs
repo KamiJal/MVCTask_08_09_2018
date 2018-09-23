@@ -11,6 +11,15 @@ namespace MVCTask_08_09_2018
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jqueryUI").Include(
+                "~/Scripts/jquery.ui.core.js",
+                "~/Scripts/jquery.ui.position.js",
+                "~/Scripts/jquery.ui.widget.js",
+                "~/Scripts/jquery.ui.autocomplete.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryAutocomplete").Include(
+                "~/Scripts/jquery.autocomplete.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 

@@ -136,5 +136,20 @@ namespace MVCTask_08_09_2018.Controllers
 
             return RedirectToAction("ListOfEmployees");
         }
+
+
+        public ActionResult AutoComplete()
+        {
+            return View();
+        }
+
+
+        public ActionResult NameBase()
+        {
+            var names = new[] {"ASD", "das", "a123"};
+
+            return Json(names.ToList(), JsonRequestBehavior.AllowGet);
+        }
+
     }
 }
