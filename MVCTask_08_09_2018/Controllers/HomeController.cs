@@ -35,6 +35,8 @@ namespace MVCTask_08_09_2018.Controllers
         {
             var viewModel = new EmployeeFormViewModel
             {
+                Title = "Add New Employee",
+                SubmitName = "Add",
                 Departments = _context.Departments.ToList(),
                 Sexes = _context.Sexes.ToList(),
                 ProgrammingLanguages = _context.ProgrammingLanguages.ToList()
@@ -91,7 +93,20 @@ namespace MVCTask_08_09_2018.Controllers
         {
             var employee = _context.Employees.SingleOrDefault(e => e.Id == id);
 
-            return View();
+            if (employee == null)
+                return HttpNotFound();
+
+            var viewModel = new EmployeeFormViewModel
+            {
+                Title = "Change Employee Data",
+                SubmitName = "Save",
+                Employee = employee,
+                Departments = _context.Departments.ToList(),
+                Sexes = _context.Sexes.ToList(),
+                ProgrammingLanguages = _context.ProgrammingLanguages.ToList()
+            };
+
+            return View("EmployeeForm", viewModel);
         }
     }
 }

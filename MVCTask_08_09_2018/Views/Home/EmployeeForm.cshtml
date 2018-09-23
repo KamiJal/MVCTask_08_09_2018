@@ -1,11 +1,10 @@
 ﻿@model MVCTask_08_09_2018.ViewModels.EmployeeFormViewModel
 
 @{
-    ViewBag.Title = "AddEmployee";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Add New Employee</h2>
+<h2>@Model.Title</h2>
 
 
 @using (Html.BeginForm("Save", "Home", FormMethod.Post)) 
@@ -66,7 +65,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Add" class="btn btn-primary" />
+                <input type="submit" value="@Model.SubmitName" class="btn btn-primary" />
                 @Html.ActionLink("Cancel", "ListOfEmployees", null, new {@class = "btn btn-danger"})
             </div>
         </div>
