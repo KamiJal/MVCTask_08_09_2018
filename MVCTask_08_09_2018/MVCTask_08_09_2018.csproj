@@ -178,6 +178,10 @@
     <Compile Include="Migrations\201809230740408_PopulateSexes.Designer.cs">
       <DependentUpon>201809230740408_PopulateSexes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809230745331_AddedEmployees.cs" />
+    <Compile Include="Migrations\201809230745331_AddedEmployees.Designer.cs">
+      <DependentUpon>201809230745331_AddedEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtsoftDb.cs" />
     <Compile Include="Models\Department.cs" />
@@ -258,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809230740408_PopulateSexes.resx">
       <DependentUpon>201809230740408_PopulateSexes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809230745331_AddedEmployees.resx">
+      <DependentUpon>201809230745331_AddedEmployees.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
