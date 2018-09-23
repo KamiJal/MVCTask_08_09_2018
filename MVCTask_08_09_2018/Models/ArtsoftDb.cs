@@ -24,6 +24,7 @@ namespace MVCTask_08_09_2018.Models
 
         public virtual DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
         public virtual DbSet<Department> Departments{ get; set; }
+        public virtual DbSet<Sex> Sexes { get; set; }
     }
 
     //public class MyEntity
