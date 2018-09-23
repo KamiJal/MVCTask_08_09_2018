@@ -30,14 +30,14 @@ namespace MVCTask_08_09_2018.Controllers
 
         public ActionResult AddEmployee()
         {
-            ViewBag.Message = "Your application description page.";
+            
 
             return View();
         }
 
         public ActionResult EditEmployee(int id)
         {
-            ViewBag.Message = "Your contact page.";
+
 
             return View();
         }
