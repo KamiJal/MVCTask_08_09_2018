@@ -164,6 +164,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtsoftDb.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\ProgrammingLanguage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
