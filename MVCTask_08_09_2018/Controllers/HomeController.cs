@@ -23,7 +23,9 @@ namespace MVCTask_08_09_2018.Controllers
 
         public ActionResult ListOfEmployees()
         {
-            return View();
+            var employees = _context.Employees.ToList();
+
+            return View(employees);
         }
 
         public ActionResult AddEmployee()
