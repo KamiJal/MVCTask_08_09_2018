@@ -13,6 +13,8 @@ namespace MVCTask_08_09_2018
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.LowercaseUrls = true;
+
             routes.MapRoute(
                 name: "Default",
                 url: "{action}/{id}",

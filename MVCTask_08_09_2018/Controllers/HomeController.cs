@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MVCTask_08_09_2018.Models;
+using MVCTask_08_09_2018.ViewModels;
 
 namespace MVCTask_08_09_2018.Controllers
 {
@@ -28,11 +29,16 @@ namespace MVCTask_08_09_2018.Controllers
             return View(employees);
         }
 
-        public ActionResult AddEmployee()
+        public ActionResult Add()
         {
-            
+            var viewModel = new EmployeeFormViewModel
+            {
+                Departments = _context.Departments.ToList(),
+                Sexes = _context.Sexes.ToList(),
+                ProgrammingLanguages = _context.ProgrammingLanguages.ToList()
+            };
 
-            return View();
+            return View("EmployeeForm", viewModel);
         }
 
         public ActionResult EditEmployee(int id)
