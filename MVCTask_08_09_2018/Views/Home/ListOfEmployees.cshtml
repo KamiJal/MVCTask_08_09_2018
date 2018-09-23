@@ -5,14 +5,16 @@
 }
 
 <h2>List Of Employees</h2>
+<hr />
+<br />
 
-<p>@Html.ActionLink("Add Employee", "Add", null, new {@class = "btn btn-primary"})</p>
-
+<p>@Html.ActionLink("Add Employee", "Add", null, new { @class = "btn btn-primary" })</p>
+<br />
 
 @if (Model.Any())
 {
 
-    <table class="table table-hover">
+    <table id="employees" class="table table-hover">
         <tr>
             <th>@Html.DisplayNameFor(model => model.FirstName)</th>
             <th>@Html.DisplayNameFor(model => model.LastName)</th>
@@ -25,24 +27,26 @@
 
         @foreach (var item in Model)
         {
-        <tr>
-            <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
-            <td>@Html.DisplayFor(modelItem => item.LastName)</td>
-            <td>@Html.DisplayFor(modelItem => item.Sex.Type)</td>
-            <td>@Html.DisplayFor(modelItem => item.Age)</td>
-            <td>@Html.DisplayFor(modelItem => item.Department.Name)</td>
-            <td>@Html.DisplayFor(modelItem => item.ProgrammingLanguage.Name)</td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+                <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Sex.Type)</td>
+                <td>@Html.DisplayFor(modelItem => item.Age)</td>
+                <td>@Html.DisplayFor(modelItem => item.Department.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.ProgrammingLanguage.Name)</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
         }
     </table>
 
-    
+    @Html.AntiForgeryToken()
 }
 else
 {
     <h3 class="text-warning">There is no employees in database at this moment.</h3>
 }
+
+<br />

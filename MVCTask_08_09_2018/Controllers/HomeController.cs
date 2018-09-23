@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using System.Net;
+using System.Web.Services;
 using MVCTask_08_09_2018.Models;
 using MVCTask_08_09_2018.ViewModels;
 
@@ -111,6 +113,28 @@ namespace MVCTask_08_09_2018.Controllers
             };
 
             return View("EmployeeForm", viewModel);
+        }
+
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
+        {
+            var employee = _context.Employees.SingleOrDefault(e => e.Id == id);
+
+            if (employee == null)
+                return HttpNotFound();
+
+            _context.Employees.Remove(employee);
+
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+            }
+
+
+            return RedirectToAction("ListOfEmployees");
         }
     }
 }
