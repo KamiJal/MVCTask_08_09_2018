@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 using MVCTask_08_09_2018.Models;
 using MVCTask_08_09_2018.ViewModels;
 
@@ -24,7 +25,10 @@ namespace MVCTask_08_09_2018.Controllers
 
         public ActionResult ListOfEmployees()
         {
-            var employees = _context.Employees.ToList();
+            var employees = _context.Employees
+                .Include(e => e.Sex)
+                .Include(e => e.Department)
+                .Include(e => e.ProgrammingLanguage).ToList();
 
             return View(employees);
         }
