@@ -29,6 +29,8 @@ namespace MVCTask_08_09_2018.Controllers
             return View(employees);
         }
 
+
+        // GET: /add
         public ActionResult Add()
         {
             var viewModel = new EmployeeFormViewModel
@@ -41,9 +43,53 @@ namespace MVCTask_08_09_2018.Controllers
             return View("EmployeeForm", viewModel);
         }
 
-        public ActionResult EditEmployee(int id)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(Employee employee)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new EmployeeFormViewModel
+                {
+                    Employee = employee,
+                    Departments = _context.Departments.ToList(),
+                    Sexes = _context.Sexes.ToList(),
+                    ProgrammingLanguages = _context.ProgrammingLanguages.ToList()
+                };
 
+                return View("EmployeeForm", viewModel);
+            }
+
+            if (employee.Id == 0)
+            {
+                _context.Employees.Add(employee);
+            }
+            else
+            {
+                var employeeInDb = _context.Employees.Single(e => e.Id == employee.Id);
+
+                employeeInDb.FirstName = employee.FirstName;
+                employeeInDb.LastName = employee.LastName;
+                employeeInDb.Age = employee.Age;
+                employeeInDb.SexId = employee.SexId;
+                employeeInDb.DepartmentId = employee.DepartmentId;
+                employeeInDb.ProgrammingLanguageId = employee.ProgrammingLanguageId;
+            }
+
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return RedirectToAction("ListOfEmployees");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var employee = _context.Employees.SingleOrDefault(e => e.Id == id);
 
             return View();
         }
