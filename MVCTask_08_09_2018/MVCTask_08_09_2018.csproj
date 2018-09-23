@@ -158,6 +158,10 @@
     <Compile Include="Migrations\201809230617097_AddedProgrammingLanguage.Designer.cs">
       <DependentUpon>201809230617097_AddedProgrammingLanguage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809230624549_PopulateProgrammingLanguage.cs" />
+    <Compile Include="Migrations\201809230624549_PopulateProgrammingLanguage.Designer.cs">
+      <DependentUpon>201809230624549_PopulateProgrammingLanguage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtsoftDb.cs" />
     <Compile Include="Models\ProgrammingLanguage.cs" />
@@ -220,6 +224,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201809230617097_AddedProgrammingLanguage.resx">
       <DependentUpon>201809230617097_AddedProgrammingLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809230624549_PopulateProgrammingLanguage.resx">
+      <DependentUpon>201809230624549_PopulateProgrammingLanguage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
