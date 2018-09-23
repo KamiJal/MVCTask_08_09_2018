@@ -86,7 +86,7 @@ namespace MVCTask_08_09_2018.Controllers
             {
                 _context.SaveChanges();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
 
