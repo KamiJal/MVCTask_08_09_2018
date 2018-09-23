@@ -13,7 +13,7 @@ namespace MVCTask_08_09_2018.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201809231630091_PopulateNames"; }
+            get { return "201809231825061_PopulateNames"; }
         }
         
         string IMigrationMetadata.Source

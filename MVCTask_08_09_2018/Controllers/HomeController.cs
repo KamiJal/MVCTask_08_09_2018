@@ -129,24 +129,16 @@ namespace MVCTask_08_09_2018.Controllers
             {
                 _context.SaveChanges();
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception) {}
 
 
             return RedirectToAction("ListOfEmployees");
         }
 
 
-        public ActionResult AutoComplete()
+        public JsonResult GetNames()
         {
-            return View();
-        }
-
-
-        public ActionResult NameBase()
-        {
-            var names = new[] {"ASD", "das", "a123"};
+            var names = _context.Names.Select(n => n.Value).ToArray();
 
             return Json(names.ToList(), JsonRequestBehavior.AllowGet);
         }

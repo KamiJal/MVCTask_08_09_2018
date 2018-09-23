@@ -83,6 +83,5 @@ textarea {
 
 .autocomplete-active {
     /*when navigating through the items using the arrow keys:*/
-    background-color: #66afe9;
-    color: #ffffff;
+    color: #66afe9;
 }
