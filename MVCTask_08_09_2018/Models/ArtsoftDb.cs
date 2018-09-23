@@ -21,6 +21,9 @@ namespace MVCTask_08_09_2018.Models
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
+
+        public virtual DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
+
     }
 
     //public class MyEntity

@@ -154,6 +154,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtsoftDb.cs" />
     <Compile Include="Models\ProgrammingLanguage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
