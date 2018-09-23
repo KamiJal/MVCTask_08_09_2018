@@ -21,19 +21,19 @@ namespace MVCTask_08_09_2018.Controllers
             _context.Dispose();
         }
 
-        public ActionResult Index()
+        public ActionResult ListOfEmployees()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult AddEmployee()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult EditEmployee(int id)
         {
             ViewBag.Message = "Your contact page.";
 

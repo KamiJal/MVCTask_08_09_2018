@@ -16,7 +16,7 @@ namespace MVCTask_08_09_2018
             routes.MapRoute(
                 name: "Default",
                 url: "{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "ListOfEmployees", id = UrlParameter.Optional }
             );
         }
     }
