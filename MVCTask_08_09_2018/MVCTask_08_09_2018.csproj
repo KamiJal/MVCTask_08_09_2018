@@ -186,6 +186,10 @@
     <Compile Include="Migrations\201809231627109_AddedNames.Designer.cs">
       <DependentUpon>201809231627109_AddedNames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809231630091_PopulateNames.cs" />
+    <Compile Include="Migrations\201809231630091_PopulateNames.Designer.cs">
+      <DependentUpon>201809231630091_PopulateNames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtsoftDb.cs" />
     <Compile Include="Models\Department.cs" />
@@ -283,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809231627109_AddedNames.resx">
       <DependentUpon>201809231627109_AddedNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809231630091_PopulateNames.resx">
+      <DependentUpon>201809231630091_PopulateNames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
