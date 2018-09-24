@@ -112,7 +112,6 @@ namespace MVCTask_08_09_2018.Controllers
             return View("EmployeeForm", viewModel);
         }
 
-        [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
             var employee = _context.Employees.SingleOrDefault(e => e.Id == id);

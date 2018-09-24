@@ -10,5 +10,6 @@ namespace MVCTask_08_09_2018.Utility
         public const string RequiredField = "This field is required";
         public const string SelectValue = "Select the value";
         public const string StringLength255 = "The field must be a string with a maximum length of 255";
+        public const string EmployeeEighteen = "Employee should be at least 18 years old";
     }
 }

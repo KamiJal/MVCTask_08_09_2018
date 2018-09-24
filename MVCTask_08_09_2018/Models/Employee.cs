@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using MVCTask_08_09_2018.ProjectValidationAttributes;
 using MVCTask_08_09_2018.Utility;
 
 namespace MVCTask_08_09_2018.Models
@@ -23,6 +24,7 @@ namespace MVCTask_08_09_2018.Models
         public string LastName { get; set; }
 
         [Required(ErrorMessage = ErrorMessages.RequiredField)]
+        [AgeUnderEighteen]
         public int Age { get; set; }
 
         [Required(ErrorMessage = ErrorMessages.SelectValue)]
