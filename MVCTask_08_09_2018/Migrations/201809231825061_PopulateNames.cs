@@ -15,7 +15,6 @@ namespace MVCTask_08_09_2018.Migrations
             Sql("INSERT INTO Names VALUES ('Alberta')");
             Sql("INSERT INTO Names VALUES ('Alcott')");
             Sql("INSERT INTO Names VALUES ('Alden')");
-            Sql("INSERT INTO Names VALUES ('Alden')");
             Sql("INSERT INTO Names VALUES ('Aldous')");
             Sql("INSERT INTO Names VALUES ('Aldrich')");
             Sql("INSERT INTO Names VALUES ('Alexis')");
@@ -143,7 +142,6 @@ namespace MVCTask_08_09_2018.Migrations
             Sql("INSERT INTO Names VALUES ('Blanford')");
             Sql("INSERT INTO Names VALUES ('Blaze')");
             Sql("INSERT INTO Names VALUES ('Bligh')");
-            Sql("INSERT INTO Names VALUES ('Bliss')");
             Sql("INSERT INTO Names VALUES ('Bliss')");
             Sql("INSERT INTO Names VALUES ('Blossom')");
             Sql("INSERT INTO Names VALUES ('Blue')");
@@ -668,7 +666,6 @@ namespace MVCTask_08_09_2018.Migrations
             Sql("INSERT INTO Names VALUES ('Jonesy')");
             Sql("INSERT INTO Names VALUES ('Joplin')");
             Sql("INSERT INTO Names VALUES ('Josie')");
-            Sql("INSERT INTO Names VALUES ('Joss')");
             Sql("INSERT INTO Names VALUES ('Joss')");
             Sql("INSERT INTO Names VALUES ('Journee')");
             Sql("INSERT INTO Names VALUES ('Journey')");

@@ -13,27 +13,27 @@ namespace MVCTask_08_09_2018.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = ErrorMessages.RequiredField)]
-        [StringLength(255)]
+        [StringLength(255, ErrorMessage = ErrorMessages.StringLength255)]
         [DisplayName("First Name")]
         public string FirstName { get; set; }
 
         [Required(ErrorMessage = ErrorMessages.RequiredField)]
-        [StringLength(255)]
+        [StringLength(255, ErrorMessage = ErrorMessages.StringLength255)]
         [DisplayName("Last Name")]
         public string LastName { get; set; }
 
         [Required(ErrorMessage = ErrorMessages.RequiredField)]
         public int Age { get; set; }
 
-        [Required(ErrorMessage = ErrorMessages.RequiredField)]
+        [Required(ErrorMessage = ErrorMessages.SelectValue)]
         [DisplayName("Sex")]
         public int SexId { get; set; }
 
-        [Required(ErrorMessage = ErrorMessages.RequiredField)]
+        [Required(ErrorMessage = ErrorMessages.SelectValue)]
         [DisplayName("Department")]
         public int DepartmentId { get; set; }
 
-        [Required(ErrorMessage = ErrorMessages.RequiredField)]
+        [Required(ErrorMessage = ErrorMessages.SelectValue)]
         [DisplayName("Programming Language")]
         public int ProgrammingLanguageId { get; set; }
 
