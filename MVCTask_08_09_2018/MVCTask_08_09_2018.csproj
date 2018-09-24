@@ -190,6 +190,10 @@
     <Compile Include="Migrations\201809231825061_PopulateNames.Designer.cs">
       <DependentUpon>201809231825061_PopulateNames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809240943214_PopulateEmployeeWithDefaultData.cs" />
+    <Compile Include="Migrations\201809240943214_PopulateEmployeeWithDefaultData.Designer.cs">
+      <DependentUpon>201809240943214_PopulateEmployeeWithDefaultData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ArtsoftDb.cs" />
     <Compile Include="Models\Department.cs" />
@@ -283,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809231825061_PopulateNames.resx">
       <DependentUpon>201809231825061_PopulateNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809240943214_PopulateEmployeeWithDefaultData.resx">
+      <DependentUpon>201809240943214_PopulateEmployeeWithDefaultData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
